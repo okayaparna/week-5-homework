@@ -12,12 +12,12 @@ function currentTime() {
         session = "PM";
     }
     if(7 < hh < 19) {
-        document.getElementById("sun").style.display = "initial";
-        document.getElementById("moon").style.display = "none";
+        document.getElementById("day").style.display = "initial";
+        document.getElementById("night").style.display = "none";
     }
     if(19 < hh > 7) {
-        document.getElementById("moon").style.display = "initial";
-        document.getElementById("sun").style.display = "none";
+        document.getElementById("night").style.display = "initial";
+        document.getElementById("day").style.display = "none";
     }
    
      hh = (hh < 10) ? "0" + hh : hh;
