@@ -8,29 +8,26 @@ function currentTime() {
 
   
 
-    if(hh >= 12){
+    if(hh > 12) {
         session = "PM";
     }
-    else{
-        session = "AM";
+    if(7 < hh < 19) {
+        document.getElementById("sun").style.display = "initial";
+        document.getElementById("moon").style.display = "none";
     }
-
-    if(session = "AM"){
-        document.getElementById("day").style.display = "initial";
-        document.getElementById("night").style.display = "none";
-        document.getElementById("myvideo-day").style.display = "initial";
-        document.getElementById("myvideo-night").style.display = "none";
-    }
-
-    else{
-        document.getElementById("night").style.display = "initial";
-        document.getElementById("day").style.display = "none";
-        document.getElementById("myvideo-night").style.display = "initial";
-        document.getElementById("myvideo-day").style.display = "none";
+    if(19 < hh > 7) {
+        document.getElementById("moon").style.display = "initial";
+        document.getElementById("sun").style.display = "none";
     }
    
-    let time = hh + ":" + mm + ":" + ss + " " + session;
+     hh = (hh < 10) ? "0" + hh : hh;
+     mm = (mm < 10) ? "0" + mm : mm;
+     ss = (ss < 10) ? "0" + ss : ss;
+     hh = (hh > 13) ? hh - 12 : hh;
+      
+    //let time = hh + ":" + mm + ":" + ss + " " + session;
   
+    //document.getElementById("clock").innerText = time; 
     document.getElementById("hours").innerText = hh; 
     document.getElementById("minutes").innerText = mm; 
     document.getElementById("seconds").innerText = ss; 
@@ -38,16 +35,9 @@ function currentTime() {
 
     let t = setTimeout(function(){ currentTime() }, 1000); 
 
-    if ( session = "AM" ) {
-        document.getElementById("day").style.display = "initial";
-        document.getElementById("night").style.display = "none";
-    }
-    if ( session = "PM" ) {
-        document.getElementById("night").style.display = "initial";
-        document.getElementById("day").style.display = "none";
-    }
 
 }
+
 
  
 
