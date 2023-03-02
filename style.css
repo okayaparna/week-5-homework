@@ -4,8 +4,8 @@
 
 body {
   font-size: 22px;
-  line-height: 1.5;
-  font-family: Helvetica, sans-serif;
+  /* line-height: 1.5; */
+  font-family: 'Michroma', sans-serif;
   color: #111;
   margin: 0;
   padding: 20px 40px;
@@ -20,12 +20,24 @@ body {
 .clock {
   display: flex;
   gap: 20px;
-  padding: 20px 30px;
+  /* padding: 20px 30px; */
   text-align: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 10px;
+
+  text-align: center;
+  position: fixed;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  justify-content: center;
 }
 
-.time {
-  
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
 }
