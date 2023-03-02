@@ -18,11 +18,15 @@ function currentTime() {
     if(session = "AM"){
         document.getElementById("day").style.display = "initial";
         document.getElementById("night").style.display = "none";
+        document.getElementById("myvideo-day").style.display = "initial";
+        document.getElementById("myvideo-night").style.display = "none";
     }
 
     else{
         document.getElementById("night").style.display = "initial";
         document.getElementById("day").style.display = "none";
+        document.getElementById("myvideo-night").style.display = "initial";
+        document.getElementById("myvideo-day").style.display = "none";
     }
    
     let time = hh + ":" + mm + ":" + ss + " " + session;

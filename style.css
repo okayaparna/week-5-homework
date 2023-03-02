@@ -34,7 +34,15 @@ body {
 }
 
 
-#myVideo {
+#myvideo-day {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+#myvideo-night {
   position: fixed;
   right: 0;
   bottom: 0;
