@@ -32,26 +32,7 @@
       }
     </script>
  
-    <div class="icon" onload="icon()">
-
-      <!-- SVG Icon Goes here -->  
-      <script>
-        function icon() {
-          var now = new Date();
-          var hour = now.getHours();
-          var dayIcon = document.getElementById("day");
-          var nightIcon = document.getElementById("night");
-          
-          if (hour >= 19 || hour < 7) {
-            dayIcon.style.display = "none";
-            nightIcon.style.display = "block";
-          } else {
-            nightIcon.style.display = "none";
-            dayIcon.style.display = "block";
-          }
-        }
-      </script>
-    
+    <div class="icon" onload="icon()"> 
       <!-- SVG Icon Goes here -->  
       <svg id="day" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-brightness-high" viewBox="0 0 16 16">
         <!-- SVG Path -->
@@ -62,7 +43,22 @@
       </svg>
     </div>
     
-
+    <script>
+      function icon() {
+        var now = new Date();
+        var hour = now.getHours();
+        var dayIcon = document.getElementById("day");
+        var nightIcon = document.getElementById("night");
+        
+        if (hour >= 19 || hour < 7) {
+          dayIcon.style.display = "none";
+          nightIcon.style.display = "block";
+        } else {
+          nightIcon.style.display = "none";
+          dayIcon.style.display = "block";
+        }
+      }
+    </script>
 
     <script>
       var svg = document.getElementById("svg");
