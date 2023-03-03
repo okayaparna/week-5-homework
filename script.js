@@ -27,6 +27,7 @@ function currentTime() {
     if (hh >= 19 || hh < 7) {
         dayIcon.style.display = "none";
         nightIcon.style.display = "block";
+        session = "PM";
     } else {
         nightIcon.style.display = "none";
         dayIcon.style.display = "block";
