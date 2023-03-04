@@ -8,16 +8,28 @@ function currentTime() {
 
   
 
-    if(hh > 12) {
-        session = "PM";
-    }
-    if(7 < hh < 19) {
-        document.getElementById("day").style.display = "initial";
-        document.getElementById("night").style.display = "none";
-    }
-    if(19 < hh > 7) {
-        document.getElementById("night").style.display = "initial";
-        document.getElementById("day").style.display = "none";
+    // if(hh > 12) {
+    //     session = "PM";
+    // }
+    // if(7 < hh < 19) {
+    //     document.getElementById("day").style.display = "initial";
+    //     document.getElementById("night").style.display = "none";
+    // }
+    // if(19 < hh > 7) {
+    //     document.getElementById("night").style.display = "initial";
+    //     document.getElementById("day").style.display = "none";
+    // }
+
+
+    var dayIcon = document.getElementById("day");
+    var nightIcon = document.getElementById("night");
+    
+    if (hh >= 19 || hh < 7) {
+        dayIcon.style.display = "none";
+        nightIcon.style.display = "block";
+    } else {
+        nightIcon.style.display = "none";
+        dayIcon.style.display = "block";
     }
    
      hh = (hh < 10) ? "0" + hh : hh;
